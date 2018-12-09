@@ -1,0 +1,37 @@
+
+
+
+
+<form #workForm="ngForm" class="editForm" novalidate>
+    <div class="form-horizontal">
+      <h4 class="head text-center">{{title}}</h4>
+      <p>{{product}}</p>
+      <div class="thumbnail">
+        <img src="https://ohioinsurancesolutions.com/sites/default/files/2017-12/8.19_blogc_1.jpg"  alt="{{product}}"/>
+        <h1>Your Cover:</h1>
+        <app-cart
+          [cartItems]="cartItems"
+          [cartTotal]="cartTotal"
+          (cartItemDeleted)="onCartItemDeleted($event)"
+          (cartItemChanged)="onCartItemChanged($event)"
+        >
+        </app-cart>
+      </div>
+        <div class="tab-pane fade in active">
+
+            <div class='row'>
+              <h1>Customise</h1>
+              <app-cover
+                (cartUpdated)="onCartUpdated($event)"
+              >
+              </app-cover>
+              <br/>
+
+            </div>
+            <div class="form-group text-center space-20">
+                <button class="btn btn-outline-rounded btn-default" (click)="goToPrevious(workForm)"> <span style="margin-right:10px;" class="glyphicon glyphicon-arrow-left"></span> Previous</button>
+                <button class="btn btn-outline-rounded btn-info" [disabled]="!workForm.valid" (click)="goToNext(workForm)"> Next <span style="margin-left:10px;" class="glyphicon glyphicon-arrow-right"></span></button>
+            </div>
+        </div>
+    </div>
+</form>

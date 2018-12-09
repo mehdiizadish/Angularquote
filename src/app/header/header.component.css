@@ -1,0 +1,64 @@
+.Header-wrapper{
+  max-width: 950px;
+  margin : auto; padding: 10px;
+}
+.sg-Header {
+  position: relative;
+  background-color: #ffffff;
+  border-bottom: solid 10px #cc0000;
+  color: inherit;
+}
+.Header-wrapper h1 {
+  font-size: 3rem;
+  font-weight: normal;
+  margin: 0;
+}
+.sg-Header .sg-List-horizontal {
+  margin: 0;
+}
+.sg-List-horizontal>li, .sg-List-unstyledHorizontal>li, .sg-List-breadcrumb>li {
+  display: inline-block;
+  margin: .2em .35em;
+  padding: 0;
+  vertical-align: top;
+  list-style-type: none;
+  text-indent: 0;
+}
+.sg-Type--phone {
+  color: #cc0000;
+  text-decoration: none;
+  white-space: nowrap;
+  font-weight: bold;
+  cursor: default;
+}
+.sg-Header-column:first-child {
+  vertical-align: middle;
+}
+.sg-Header-column {
+  display: table-cell;
+
+}
+.sg-Header-column:last-child {
+  width: 100%;
+  text-align: right;
+}
+
+.sg-Header-logo {
+  background-image: url(https://online.aami.com.au/business/bower_components/sg-component-page/src/aaminew/img/Logo-header--retina.png);
+  background-repeat: no-repeat;
+  -moz-background-size: 166px 73px;
+  -o-background-size: 166px 73px;
+  background-size: 166px 73px;
+}
+.sg-Header-logo {
+  display: block;
+  width: 166px;
+  height: 73px;
+  margin-right: 5px;
+  overflow: hidden;
+  background-color: transparent;
+  border: 0;
+}
+.sg-Header-content .sg-Header-column:last-child {
+  padding-bottom: 10px;
+}
